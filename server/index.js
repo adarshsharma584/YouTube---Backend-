@@ -5,6 +5,12 @@ import { connectDB } from "./utils/dbConnect.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import authRouter from "./routes/auth.route.js";
+import userRouter from "./routes/user.route.js";
+import watchLaterRouter from "./routes/watchLater.route.js";
+
+
+
+
 const app = express ();
 const PORT = process.env.PORT || 3000;
 
@@ -18,6 +24,8 @@ app.use(cors());
 
 //Routes
 app.use("/api/auth", authRouter);
+app.use("/api/user", userRouter);
+app.use("/api/watch-later", watchLaterRouter);
 
 
 
