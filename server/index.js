@@ -7,6 +7,7 @@ import cors from "cors";
 import authRouter from "./routes/auth.route.js";
 import userRouter from "./routes/user.route.js";
 import watchLaterRouter from "./routes/watchLater.route.js";
+import likedVideosRouter from "./routes/likedVideos.route.js";
 
 
 
@@ -26,6 +27,7 @@ app.use(cors());
 app.use("/api/auth", authRouter);
 app.use("/api/user", userRouter);
 app.use("/api/watch-later", watchLaterRouter);
+app.use("/api/liked-videos", likedVideosRouter);
 
 
 
