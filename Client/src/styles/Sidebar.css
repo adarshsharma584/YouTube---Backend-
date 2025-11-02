@@ -4,9 +4,10 @@
    
 }
 .hamburger-div{
-    background-color: rgb(34, 33, 33);
+   
     margin-top: 10px;
-   border-right: 2px solid rgb(10, 0, 0);
+   padding-left: 10px;
+    
     
 }
 .hamburger-div ul li{

@@ -5,9 +5,9 @@
     padding: 0px 10px;
     color:white;
     height:70px;
-    width: 100%;
-    border-bottom: 2px solid rgb(10, 0, 0);
+    width: 98%;
     
+    margin:auto;
   
 }
 .logo{
@@ -35,6 +35,7 @@
     width: 100%;
     color: black;
     font-weight: 500;
+    
 }
 .search-bar input{
     border: none;
@@ -44,12 +45,13 @@
     height:36px;
     width: 100%;
     
+    
 }
 .search-icon{
     color: #888;
     margin-right: 20px;
     font-size: 24px;
-   
+    
 }
 
 .right-side{
@@ -60,7 +62,7 @@
     width:fit-content;
 }
 .icon{
-    font-size:18px;
+    font-size:22px;
     padding: 5px;
     height:40px;
     width:40px;
@@ -72,7 +74,7 @@
     justify-content: center;
 }
 .upload-icon{
-   background-color:rgb(34, 34, 34); 
+   background-color:rgb(61, 61, 61); 
     color: white;
     font-size: 20px;
     padding: 12px;

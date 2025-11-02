@@ -10,7 +10,7 @@ import { FaBars } from "react-icons/fa";
 function Navbar({ toggleSidebar }) {
   return (
     <>
-      <div className="nav-container">
+      <div className="nav-container ">
         <div className="left-side">
           <button onClick={toggleSidebar}>
             <FaBars className="text-xl" />
@@ -33,14 +33,14 @@ function Navbar({ toggleSidebar }) {
             <input type="text" placeholder="Search" />
             <FiSearch className="search-icon" />
           </div>
-          <div className="icon" style={{ backgroundColor: "rgb(34, 34, 34)" }}>
+          <div className="icon" style={{ backgroundColor: "rgb(64, 64, 64)" }}>
             <FaMicrophone className="mic-icon " />
           </div>
         </div>
         <div className="right-side">
           <div className="upload-icon">
-            <IoAddOutline style={{ color: "white", fontSize: "20px" }} />
-            <span style={{ color: "white", fontSize: "15px" }}>Create</span>
+            <IoAddOutline style={{ color: "white", fontSize: "22px" ,font:"bold" }} />
+            <span style={{ color: "white", fontSize: "20px" }}>Create</span>
           </div>
           <div className="icon">
             <FaBell className="notification-icon " />

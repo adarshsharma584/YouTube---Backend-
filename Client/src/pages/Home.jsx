@@ -1,19 +1,13 @@
-import React, { useState } from "react";
-import Navbar from "../components/Navbar.jsx";
-import Sidebar from "../components/Sidebar.jsx";
-import SideLayout from "../components/SideLayout.jsx";
-function Home() {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+import { useOutletContext } from "react-router-dom";
+import HeroSection from "../components/HeroSection.jsx";
 
-  const toggleSidebar = () => {
-    setSidebarOpen(!sidebarOpen);
-  };
+function Home() {
+  const { open } = useOutletContext() || { open: false };
+
   return (
-    <div className="home-page  w-full  px-4 ">
-      <Navbar toggleSidebar={toggleSidebar} />
+    <div className="home-page w-full px-4">
       <div className="flex">
-        <Sidebar open={sidebarOpen} />
-        <SideLayout open={sidebarOpen} />
+        <HeroSection open={open} />
       </div>
     </div>
   );

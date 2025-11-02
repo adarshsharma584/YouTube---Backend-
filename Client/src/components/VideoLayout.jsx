@@ -1,17 +1,17 @@
-import React from 'react'
-import { Video } from './../../../server/models/video.model';
 
-function VideoLayout({open,imageSrc,videoTitle,VideoDescription,videoImageSrc}) {
+
+
+function VideoLayout({open,avatar,title,description,thumbnail}) {
   return (
-    <div className={`video-layout   rounded-xl shadow-lg flex flex-col items-center m-2 ${open ? 'w-[330px]' : 'w-[370px]'}`}>
-      <img className='w-full h-40 object-cover rounded-t-lg' src={videoImageSrc }  alt="video thumbnail"/>
-        <div className="flex items-center py-1 mt-2 w-full gap-2 border-t-2 border-t-gray-900   rounded-b-lg ">
+    <div className={`video-layout   rounded-xl  flex flex-col items-center m-2 hover:bg-gray-800 hover:cursor-pointer ${open ? 'min-w-[325px] max-w-[325px]' : 'min-w-[375px] max-w-[375px]'}`}>
+      <img className='w-full h-[220px] object-cover rounded-lg' src={thumbnail }  alt="video thumbnail"/>
+        <div className="flex items-center  mt-2  w-full gap-2   bg-transparent">
           
-          <img className='w-12 h-12 rounded-full m-2 ' src={imageSrc} alt=""/>
+          <img className='w-12 h-12 rounded-full m-2 ' src={avatar} alt=""/>
           <div className="flex flex-col justify-center">
 
-              <h3 className="text-lg font-semibold">{videoTitle}</h3>
-              <p className="text-sm text-gray-600">{VideoDescription}</p>
+              <h3 className="text-lg font-semibold">{title}</h3>
+              <p className="text-sm text-gray-600">{description}</p>
           </div>
 
         </div>
