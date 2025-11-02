@@ -9,11 +9,12 @@ import userRouter from "./routes/user.route.js";
 import watchLaterRouter from "./routes/watchLater.route.js";
 import likedVideosRouter from "./routes/likedVideos.route.js";
 import channelRouter from "./routes/channel.route.js";
+import videoRouter from "./routes/video.route.js";
 
 
 
 
-const app = express ();
+const app = express();
 const PORT = process.env.PORT || 3000;
 
 connectDB();
@@ -30,6 +31,7 @@ app.use("/api/user", userRouter);
 app.use("/api/watch-later", watchLaterRouter);
 app.use("/api/liked-videos", likedVideosRouter);
 app.use("/api/channel", channelRouter);
+app.use("/api/video", videoRouter);
 
 
 

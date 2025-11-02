@@ -1,5 +1,6 @@
 import { User } from "../models/user.model.js";
 import { WatchLater } from "../models/watchLater.model.js";
+import { uploadOnCloudinary } from "../utils/uploadOnCloudinary.js";
 const getUserProfile = async (req, res) => {
   try {
     const userId = req.user.id;
@@ -23,12 +24,23 @@ const updateUserProfile = async (req, res) => {
     if (!userId) {
       return res.status(400).json({ message: "Unauthorized User" });
     }
+
+    const updateData = {
+      username,
+      email,
+    };
+
+    // Handle avatar upload if file is provided
+    if (req.file) {
+      const avatarResponse = await uploadOnCloudinary(req.file.path, "avatars");
+      if (avatarResponse) {
+        updateData.avatar = avatarResponse.secure_url;
+      }
+    }
+
     const updatedUser = await User.findByIdAndUpdate(
       userId,
-      {
-        username,
-        email,
-      },
+      updateData,
       { new: true }
     ).select("-password");
 

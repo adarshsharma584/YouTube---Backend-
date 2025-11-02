@@ -30,7 +30,7 @@ const register = async (req, res) => {
       sameSite: "none",
       maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
     });
-    const createdUser = User.findById(user._id).select("-password");
+    const createdUser = await User.findById(user._id).select("-password");
     return res.status(201).json({
       message: "User registered successfully",
       user: createdUser,
@@ -64,10 +64,11 @@ const login = async (req, res) => {
     sameSite: "none",
     maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
   });
+  const userSafe = await User.findById(user._id).select("-password");
 
   return res.status(200).json({
     message: "User logged in successfully",
-    user: user,
+    user: userSafe,
     accessToken,
     refreshToken,
   });
