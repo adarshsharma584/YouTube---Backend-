@@ -1,0 +1,93 @@
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+    color:white;
+    height:70px;
+    width: 100%;
+    border-bottom: 2px solid rgb(10, 0, 0);
+    
+  
+}
+.logo{
+    height: 40px;
+    width: 100px;
+    color:white;
+}
+.middle-side{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    gap:20px;
+    max-width: 800px;
+    width: 100%;
+}
+.search-bar{
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 5px 10px;
+    height:40px;
+    max-width:600px;
+    width: 100%;
+    color: black;
+    font-weight: 500;
+}
+.search-bar input{
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 20px;
+    height:36px;
+    width: 100%;
+    
+}
+.search-icon{
+    color: #888;
+    margin-right: 20px;
+    font-size: 24px;
+   
+}
+
+.right-side{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height:100%;
+    width:fit-content;
+}
+.icon{
+    font-size:18px;
+    padding: 5px;
+    height:40px;
+    width:40px;
+    cursor: pointer;
+    border-radius: 50%;
+     
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.upload-icon{
+   background-color:rgb(34, 34, 34); 
+    color: white;
+    font-size: 20px;
+    padding: 12px;
+    height:40px;
+    width:fit-content;
+    border-radius:20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+}
+.left-side{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
